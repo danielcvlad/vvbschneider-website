@@ -50,12 +50,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="about-grid">
         <!-- Image / Visual side -->
-        <div class="about-image reveal" style="background-image: url('/vvbschneider-website/brand.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-          <div class="about-image__inner">
-            <h3>Jürgen Schneider</h3>
-            <p>Geprüfter Versicherungsfachmann (BWV) & zugelassener Versicherungsmakler</p>
-          </div>
-
+        <div class="about-image reveal" style="background-image: url('/vvbschneider-website/hero.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
           <div class="stats-row">
             <div class="stat">
               <div class="stat__number">100%</div>
@@ -241,14 +236,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Quote / Trust element -->
         <div class="about-image reveal" style="order: 1; background-image: url('/vvbschneider-website/hero.jpg'); background-size: cover; background-position: center;">
-          <div style="text-align: center; padding: 2rem 0; position: relative; z-index: 1;">
-            <div style="font-size: 4rem; line-height: 1; margin-bottom: 1rem; opacity: 0.9;">❝</div>
-            <p style="font-size: 1.15rem; font-style: italic; line-height: 1.8; color: rgba(255,255,255,0.9); font-family: var(--font-heading); margin-bottom: 1.5rem;">
-              Sicher – Fair – Einfach
-            </p>
-            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.15em;">
-              Unser Motto seit über 35 Jahren
-            </p>
+          <div class="quote-decoration" aria-hidden="true">
+            <div class="quote-mark">❝</div>
+            <div class="quote-text">Sicher – Fair – Einfach</div>
+            <div class="quote-sub">Unser Motto seit über 35 Jahren</div>
           </div>
         </div>
       </div>
