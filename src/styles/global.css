@@ -525,6 +525,8 @@ p { max-width: 68ch; }
 
 .about-image {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius-xl);
   padding: 3rem;
   position: relative;

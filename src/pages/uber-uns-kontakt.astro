@@ -11,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <header class="page-header">
     <div class="container page-header__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
+        <a href="/vvbschneider-website/">Home</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page">Über uns & Kontakt</span>
       </nav>
@@ -55,7 +55,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="about-image reveal" style="display: flex; flex-direction: column; justify-content: center; min-height: 300px;">
+        <div class="about-image reveal" style="display: flex; flex-direction: column; justify-content: center; min-height: 300px; background-image: url('/team.jpg'); background-size: cover; background-position: center;">
           <div style="text-align: center; position: relative; z-index: 1; padding: 1rem 0;">
             <div style="font-size: 3.5rem; margin-bottom: 1rem; opacity: 0.9;">🏢</div>
             <h3 style="margin-bottom: 1.5rem;">Unsere treuen Kunden</h3>
@@ -152,7 +152,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <!-- Google Map -->
           <div class="map-container" style="margin-top: 1.5rem;">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.7!2d11.25!3d48.3667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e32d0e0ad30d7%3A0x0!2sBgm.-Gruner-Str.%203%2C%2085250%20Altom%C3%BCnster!5e0!3m2!1sde!2sde!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42567.96604622747!2d11.244549285130644!3d48.36918613364722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e32d0e0ad30d7%3A0x0!2sBgm.-Gruner-Str.%203%2C%2085250%20Altom%C3%BCnster!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Standort von VVB Jürgen Schneider – Bgm.-Gruner-Str. 3, 85250 Altomünster"
@@ -283,7 +283,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   />
                   <label for="consent">
                     Ich stimme der Verarbeitung meiner Daten gemäß der
-                    <a href="/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.
+                    <a href="/vvbschneider-website/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.
                     Meine Daten werden ausschließlich zur Beantwortung meiner Anfrage verwendet. *
                   </label>
                 </div>
@@ -328,16 +328,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   const formSuccess = document.getElementById('form-success') as HTMLElement | null;
 
   let captchaValid = false;
-
-  // hCaptcha callback
-  (window as any).onCaptchaSuccess = function() {
-    captchaValid = true;
-    if (formError) formError.style.display = 'none';
-  };
-
-  (window as any).onCaptchaError = function() {
-    captchaValid = false;
-  };
 
   // Expose for hCaptcha
   (window as any).onCaptchaSuccess = function() {

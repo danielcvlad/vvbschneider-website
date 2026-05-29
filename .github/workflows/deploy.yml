@@ -56,6 +56,14 @@
           "name": "Deploy to GitHub Pages",
           "id": "deployment",
           "uses": "actions/deploy-pages@v4"
+        },
+        {
+          "name": "Output deployed URL",
+          "run": "echo \"🌐 Deployed to: ${{ steps.deployment.outputs.page_url }}\""
+        },
+        {
+          "name": "Add URL to workflow summary",
+          "run": "echo \"${{ steps.deployment.outputs.page_url }}\" >> $GITHUB_STEP_SUMMARY"
         }
       ]
     }
