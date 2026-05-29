@@ -379,10 +379,10 @@ p { max-width: 68ch; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(15,35,64,0.7) 0%, rgba(15,35,64,0.85) 100%),
+    linear-gradient(to bottom, rgba(15,35,64,0.65) 0%, rgba(15,35,64,0.8) 100%),
     url('/vvbschneider-website/hero.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center;
 }
 
 .hero__pattern {
@@ -533,40 +533,6 @@ p { max-width: 68ch; }
   align-items: center;
 }
 
-.quote-decoration {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2.5rem 2rem 2rem;
-  background: linear-gradient(to top, rgba(15,35,64,0.85) 0%, rgba(15,35,64,0.6) 60%, transparent 100%);
-  text-align: center;
-}
-
-.quote-mark {
-  font-size: 3rem;
-  line-height: 1;
-  color: var(--color-secondary);
-  opacity: 0.7;
-  margin-bottom: 0.5rem;
-}
-
-.quote-text {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-style: italic;
-  color: rgba(255,255,255,0.95);
-  line-height: 1.4;
-  margin-bottom: 0.75rem;
-}
-
-.quote-sub {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
 .about-image {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   background-size: cover;
@@ -575,20 +541,6 @@ p { max-width: 68ch; }
   padding: 3rem;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.about-image::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(15,35,64,0.75) 0%, rgba(15,35,64,0.3) 60%, transparent 100%);
-  pointer-events: none;
 }
 
 .about-image::before {
@@ -619,8 +571,6 @@ p { max-width: 68ch; }
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
 .stat {
@@ -1145,8 +1095,8 @@ p { max-width: 68ch; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 768px) {
-  .hero__bg { background-position: center 20%; }
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
