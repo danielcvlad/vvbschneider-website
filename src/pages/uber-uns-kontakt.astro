@@ -1,0 +1,397 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Über uns & Kontakt"
+  description="Lernen Sie VVB Jürgen Schneider kennen – Ihren unabhängigen Versicherungsmakler in Altomünster. Kontakt aufnehmen für eine kostenlose Beratung."
+>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container page-header__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Über uns & Kontakt</span>
+      </nav>
+      <h1>Über uns &amp; Kontakt</h1>
+      <p>Wir freuen uns darauf, Sie persönlich kennenzulernen und für Sie da zu sein.</p>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="section__tag">Über uns</div>
+          <h2 id="about-heading">Ihr Versicherungspartner in Altomünster</h2>
+
+          <p style="margin-top: 1.25rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            Wir sind als Versicherungsmakler, der nicht an ein bestimmtes Unternehmen gebunden ist,
+            in der Lage das für Sie preiswerteste Versicherungsangebot am Markt zu finden und Sie
+            optimal zu beraten.
+          </p>
+
+          <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            In Versicherungsfragen und Schadenangelegenheiten sind wir Ihr kompetenter Ansprechpartner
+            und nehmen Ihnen viele Formalitäten gerne ab.
+            <strong style="color: var(--color-primary);">Dafür berechnen wir Ihnen kein Honorar.</strong>
+          </p>
+
+          <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            Im sich ständig verändernden Versicherungsmarkt sind wir Ihr fachkundiger Partner, der nur
+            Ihnen verpflichtet ist und Ihre Rechte gegenüber den Versicherungsgesellschaften vertritt.
+          </p>
+
+          <div style="margin-top: 2rem; background: var(--color-accent); border-radius: var(--radius-lg); padding: 1.5rem; border-left: 4px solid var(--color-secondary);">
+            <p style="font-size: 0.95rem; color: var(--color-primary); font-weight: 600; margin-bottom: 0.25rem;">
+              VVB Jürgen Schneider
+            </p>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted);">
+              Geprüfter Versicherungsfachmann (BWV) und zugelassener Versicherungsmakler
+            </p>
+          </div>
+        </div>
+
+        <div class="about-image reveal" style="display: flex; flex-direction: column; justify-content: center; min-height: 300px;">
+          <div style="text-align: center; position: relative; z-index: 1; padding: 1rem 0;">
+            <div style="font-size: 3.5rem; margin-bottom: 1rem; opacity: 0.9;">🏢</div>
+            <h3 style="margin-bottom: 1.5rem;">Unsere treuen Kunden</h3>
+
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Unsere treuen Kunden wissen, dass unser ganzes Team sich an Kundenwünschen
+              orientiert und bemüht ist, diese Ansprüche bestmöglichst zu erfüllen.
+            </p>
+
+            <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.8;">
+              Wir würden uns freuen, auch für Sie Kontaktperson und Ansprechpartner sein zu dürfen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + Map Section -->
+  <section class="section section--alt" id="kontakt" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Kontakt</div>
+        <h2 class="section__title" id="contact-heading">Sprechen Sie uns an</h2>
+        <p class="section__subtitle">
+          Ob telefonisch, per E-Mail oder über unser Kontaktformular – wir freuen uns auf Ihre Nachricht.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info Card -->
+        <div class="contact-info-card reveal">
+          <h3>VVB Jürgen Schneider</h3>
+          <p>Versicherungs-Vergleichs-Beratung in Altomünster</p>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item__label">Adresse</div>
+              <div class="contact-item__value">
+                Bgm.-Gruner-Str. 3<br />
+                85250 Altomünster
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="contact-item__label">Telefon</div>
+              <div class="contact-item__value">
+                <a href="tel:+498254995353">08254-995353</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📠</div>
+            <div>
+              <div class="contact-item__label">Fax</div>
+              <div class="contact-item__value">08254-8852</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">📱</div>
+            <div>
+              <div class="contact-item__label">Mobil</div>
+              <div class="contact-item__value">
+                <a href="tel:+4981735652766">0173-565 2766</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">✉️</div>
+            <div>
+              <div class="contact-item__label">E-Mail</div>
+              <div class="contact-item__value">
+                <a href="mailto:vvbschneider@aol.com">vvbschneider@aol.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon" aria-hidden="true">🕐</div>
+            <div>
+              <div class="contact-item__label">Erreichbarkeit</div>
+              <div class="contact-item__value">Mo–Fr: nach Vereinbarung</div>
+            </div>
+          </div>
+
+          <!-- Google Map -->
+          <div class="map-container" style="margin-top: 1.5rem;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2655.7!2d11.25!3d48.3667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e32d0e0ad30d7%3A0x0!2sBgm.-Gruner-Str.%203%2C%2085250%20Altom%C3%BCnster!5e0!3m2!1sde!2sde!4v1700000000000"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Standort von VVB Jürgen Schneider – Bgm.-Gruner-Str. 3, 85250 Altomünster"
+              aria-label="Google Maps – Standort von VVB Jürgen Schneider in Altomünster"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card reveal" id="contact-form">
+          <h3>Rückrufservice anfragen</h3>
+          <p>Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.</p>
+
+          <form
+            id="callback-form"
+            method="POST"
+            action="https://formspree.io/f/xpwzwkpq"
+            novalidate
+            aria-label="Kontaktformular für Rückrufservice"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name" class="form-label">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Max Mustermann"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="form-label">Telefonnummer *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="+49 123 456789"
+                  required
+                  autocomplete="tel"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group full">
+                <label for="email" class="form-label">E-Mail-Adresse *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="ihre@email.de"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+              </div>
+
+              <div class="form-group full">
+                <label for="topic" class="form-label">Betreff *</label>
+                <select
+                  id="topic"
+                  name="topic"
+                  class="form-select"
+                  required
+                  aria-required="true"
+                >
+                  <option value="" disabled selected>Bitte wählen…</option>
+                  <option value="KFZ-Versicherung">KFZ-Versicherung</option>
+                  <option value="Krankenversicherung">Krankenversicherung</option>
+                  <option value="Altersvorsorge">Altersvorsorge</option>
+                  <option value="Hausratversicherung">Hausratversicherung</option>
+                  <option value="Haftpflichtversicherung">Haftpflichtversicherung</option>
+                  <option value="Rechtsschutzversicherung">Rechtsschutzversicherung</option>
+                  <option value="Gewerbeversicherung">Gewerbeversicherung</option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label for="message" class="form-label">Ihre Nachricht</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Beschreiben Sie kurz Ihr Anliegen oder Ihre Frage…"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form-group full">
+                <label for="preferred-time" class="form-label">Bevorzugte Rückrufzeit</label>
+                <select id="preferred-time" name="preferred-time" class="form-select">
+                  <option value="" disabled selected>Bitte wählen…</option>
+                  <option value="vormittags">Vormittags (8–12 Uhr)</option>
+                  <option value="nachmittags">Nachmittags (12–17 Uhr)</option>
+                  <option value="abends">Abends (17–19 Uhr)</option>
+                  <option value="egal">Egal</option>
+                </select>
+              </div>
+
+              <!-- hCaptcha anti-spam -->
+              <div class="form-group full">
+                <div
+                  class="h-captcha"
+                  data-sitekey="10000000-ffff-ffff-ffff-000000000001"
+                  data-callback="onCaptchaSuccess"
+                  data-error-callback="onCaptchaError"
+                  aria-label="Captcha zur Spam-Prüfung"
+                ></div>
+                <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+              </div>
+
+              <!-- Consent -->
+              <div class="form-group full">
+                <div class="form-consent">
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    required
+                    aria-required="true"
+                  />
+                  <label for="consent">
+                    Ich stimme der Verarbeitung meiner Daten gemäß der
+                    <a href="/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.
+                    Meine Daten werden ausschließlich zur Beantwortung meiner Anfrage verwendet. *
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div id="form-error-msg" class="form-error" style="display: none;" role="alert" aria-live="polite"></div>
+
+            <button
+              type="submit"
+              class="btn btn--primary btn--lg"
+              id="submit-btn"
+              style="width: 100%; justify-content: center; margin-top: 0.5rem;"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Rückruf anfordern
+            </button>
+          </form>
+
+          <!-- Success state (hidden by default) -->
+          <div id="form-success" class="form-success" style="display: none;" aria-live="polite">
+            <div class="form-success__icon" aria-hidden="true">✓</div>
+            <h4>Anfrage gesendet!</h4>
+            <p>
+              Vielen Dank für Ihre Nachricht. Wir melden uns innerhalb von 24 Stunden
+              bei Ihnen – oder rufen Sie zum gewünschten Zeitpunkt zurück.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  // ── Form handling
+  const form = document.getElementById('callback-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement | null;
+  const formError = document.getElementById('form-error-msg') as HTMLElement | null;
+  const formSuccess = document.getElementById('form-success') as HTMLElement | null;
+
+  let captchaValid = false;
+
+  // hCaptcha callback
+  (window as any).onCaptchaSuccess = function() {
+    captchaValid = true;
+    if (formError) formError.style.display = 'none';
+  };
+
+  (window as any).onCaptchaError = function() {
+    captchaValid = false;
+  };
+
+  // Expose for hCaptcha
+  (window as any).onCaptchaSuccess = function() {
+    captchaValid = true;
+    if (formError) formError.style.display = 'none';
+  };
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      if (formError) {
+        formError.textContent = 'Bitte füllen Sie alle Pflichtfelder aus.';
+        formError.style.display = 'block';
+      }
+      return;
+    }
+
+    if (!captchaValid) {
+      if (formError) {
+        formError.textContent = 'Bitte bestätigen Sie, dass Sie kein Roboter sind.';
+        formError.style.display = 'block';
+      }
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird gesendet…';
+    }
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        if (form) form.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      if (formError) {
+        formError.textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns telefonisch.';
+        formError.style.display = 'block';
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Rückruf anfordern';
+      }
+    }
+  });
+</script>

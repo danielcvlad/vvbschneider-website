@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" aria-label="Willkommen bei VVB Jürgen Schneider">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__pattern" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__tag" aria-label="Ihr Versicherungspartner">
+          <span aria-hidden="true"></span>
+          Versicherungsmakler Altomünster
+        </div>
+
+        <h1 class="hero__title">
+          Versichern mit <em>Vertrauen</em> – für Ihr ganzes Leben
+        </h1>
+
+        <p class="hero__subtitle">
+          Wir sind Ihr ungebundener Versicherungsmakler in Altomünster und finden
+          das preiswerteste Angebot für Sie – fair, transparent und immer zu Ihrem Vorteil.
+        </p>
+
+        <div class="hero__actions">
+          <a href="/uber-uns-kontakt#kontakt" class="btn btn--primary btn--lg">
+            Kostenlose Beratung anfragen
+          </a>
+          <a href="/produkte" class="btn btn--outline-light btn--lg">
+            Unsere Produkte
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5.5" y="0.5" width="5" height="9" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/>
+        <rect x="5.5" y="12.5" width="5" height="9" rx="2.5" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-opacity="0.5"/>
+      </svg>
+      Scrollen
+    </div>
+  </section>
+
+  <!-- ═══════════════ INTRO ═══════════════ -->
+  <section class="section" aria-labelledby="intro-heading">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Image / Visual side -->
+        <div class="about-image reveal">
+          <div class="about-image__inner">
+            <h3>Jürgen Schneider</h3>
+            <p>Geprüfter Versicherungsfachmann (BWV) &amp; zugelassener Versicherungsmakler</p>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <div class="stat__number">100%</div>
+              <div class="stat__label">Unabhängig</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">35+</div>
+              <div class="stat__label">Jahre Erfahrung</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">24h</div>
+              <div class="stat__label">Erreichbarkeit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="reveal">
+          <div class="section__tag">Über uns</div>
+          <h2 id="intro-heading">Ihr Partner für alle Versicherungsfragen</h2>
+
+          <p style="margin-top: 1.25rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            Als Versicherungsmakler, der nicht an ein bestimmtes Unternehmen gebunden ist,
+            sind wir in der Lage, das für Sie preiswerteste Versicherungsangebot am Markt
+            zu finden und Sie optimal zu beraten.
+          </p>
+
+          <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            In Versicherungsfragen und Schadenangelegenheiten sind wir Ihr kompetenter
+            Ansprechpartner und nehmen Ihnen viele Formalitäten gerne ab.
+            <strong style="color: var(--color-primary);">Dafür berechnen wir Ihnen kein Honorar.</strong>
+          </p>
+
+          <p style="margin-top: 1rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
+            Im sich ständig verändernden Versicherungsmarkt sind wir Ihr fachkundiger
+            Partner, der nur Ihnen verpflichtet ist und Ihre Rechte gegenüber den
+            Versicherungsgesellschaften vertritt.
+          </p>
+
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="/uber-uns-kontakt" class="btn btn--primary">
+              Mehr über uns erfahren
+            </a>
+            <a href="/produkte" class="btn btn--outline">
+              Produkte ansehen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section class="section section--alt" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Leistungen</div>
+        <h2 class="section__title" id="services-heading">Was wir für Sie tun</h2>
+        <p class="section__subtitle">
+          Von der Altersvorsorge bis zum KFZ – wir betreuen Sie in allen Versicherungsangelegenheiten
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="card__title">Altersvorsorge &amp; Pflege</h3>
+          <p class="card__text">
+            Riesterförderung, Rürupförderung, Pflegevorsorge – wir finden die passende
+            Lösung für Ihre finanzielle Zukunftssicherung.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3 class="card__title">Berufsunfähigkeit &amp; Krankenschutz</h3>
+          <p class="card__text">
+            Absicherung bei Berufsunfähigkeit, Schutz bei schweren Krankheiten und
+            private oder gesetzliche Krankenversicherung – alles aus einer Hand.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"/></svg>
+          </div>
+          <h3 class="card__title">KFZ- &amp; Unfallversicherung</h3>
+          <p class="card__text">
+            Ob Auto, Motorrad oder Unfallabsicherung – wir vergleichen für Sie
+            und sichern die besten Konditionen.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          </div>
+          <h3 class="card__title">Wohnen &amp; Hausrat</h3>
+          <p class="card__text">
+            Hausrat-, Glas-, Wohngebäude- und Photovoltaikanlagenversicherung –
+            schützen Sie Ihr Zuhause optimal.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="card__title">Rechtsschutzversicherung</h3>
+          <p class="card__text">
+            Kompetente Beratung zur Rechtsschutzversicherung – damit Sie im
+            Streitfall optimal abgesichert sind.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3 class="card__title">Gewerbe &amp; Betrieb</h3>
+          <p class="card__text">
+            Inhaltsversicherung, Transportversicherung, Betriebsunterbrechungsversicherung
+            und mehr – für Unternehmer und Selbstständige.
+          </p>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+        <a href="/produkte" class="btn btn--primary btn--lg">
+          Alle Produkte ansehen
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WHY US ═══════════════ -->
+  <section class="section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="about-grid" style="align-items: start;">
+        <div style="order: 2;" class="reveal">
+          <div class="section__tag">Warum wir?</div>
+          <h2 id="why-heading">Unabhängig – Fair – Transparent</h2>
+
+          <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
+              <div>
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Keine versteckten Kosten</strong>
+                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Für unsere Beratung und Betreuung berechnen wir kein Honorar. Unsere Leistung wird von den Versicherungsgesellschaften bezahlt – nicht von Ihnen.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
+              <div>
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">100% unabhängig</strong>
+                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Wir arbeiten nicht für eine einzelne Versicherung, sondern für Sie. So finden wir objektiv das beste Angebot am Markt.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
+              <div>
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Persönliche Betreuung</strong>
+                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Ihr persönlicher Ansprechpartner vor Ort in Altomünster. Schnell erreichbar, direkt für Sie da – auch im Schadenfall.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
+              <div>
+                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Umfassende Vergleiche</strong>
+                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Von KFZ bis Krankenversicherung – wir vergleichen anonym und objektiv, um das optimale Preis-Leistungs-Verhältnis für Sie zu ermitteln.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote / Trust element -->
+        <div class="about-image reveal" style="order: 1;">
+          <div style="text-align: center; padding: 2rem 0; position: relative; z-index: 1;">
+            <div style="font-size: 4rem; line-height: 1; margin-bottom: 1rem; opacity: 0.9;">❝</div>
+            <p style="font-size: 1.15rem; font-style: italic; line-height: 1.8; color: rgba(255,255,255,0.9); font-family: var(--font-heading); margin-bottom: 1.5rem;">
+              Sicher – Fair – Einfach
+            </p>
+            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.15em;">
+              Unser Motto seit über 35 Jahren
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA BANNER ═══════════════ -->
+  <section class="section" aria-label="Beratung anfragen">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="cta-banner__inner">
+          <h2>Bereit für eine unverbindliche Beratung?</h2>
+          <p>
+            Kontaktieren Sie uns – wir freuen uns darauf, Sie in allen
+            Versicherungsfragen zu unterstützen.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="/uber-uns-kontakt#kontakt" class="btn btn--primary btn--lg">
+              Beratung anfragen
+            </a>
+            <a href="tel:+498254995353" class="btn btn--outline-light btn--lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              08254-995353
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

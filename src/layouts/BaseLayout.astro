@@ -1,0 +1,214 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = 'VVB Jürgen Schneider – Versicherungs-Vergleichs-Beratung in Altomünster. Sicher · Fair · Einfach',
+  image = '/og-image.png',
+  canonical,
+} = Astro.props;
+
+const siteUrl = 'https://danielcvlad.github.io';
+const base = '/vvbschneider-website';
+const pageUrl = canonical || `${siteUrl}${base}${Astro.url.pathname.replace(base, '')}`;
+const fullTitle = title === 'Home'
+  ? 'VVB Jürgen Schneider – Versicherungsmakler Altomünster'
+  : `${title} | VVB Jürgen Schneider`;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${base}${image}`} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${base}${image}`} />
+
+    <link rel="canonical" href={pageUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="/" class="nav__logo" aria-label="VVB Jürgen Schneider – Startseite">
+          <span class="nav__logo-name">VVB Jürgen Schneider</span>
+          <span class="nav__logo-tagline">Versicherungsmakler</span>
+        </a>
+
+        <div class="nav__links" role="list">
+          <a href="/" class="nav__link" id="nav-home">Home</a>
+          <a href="/produkte" class="nav__link" id="nav-produkte">Produkte</a>
+          <a href="/uber-uns-kontakt" class="nav__link" id="nav-ueber-uns">Über uns</a>
+          <a href="/impressum" class="nav__link" id="nav-impressum">Impressum</a>
+          <a href="/uber-uns-kontakt#kontakt" class="nav__cta">Beratung anfragen</a>
+        </div>
+
+        <button
+          class="nav__hamburger"
+          id="nav-hamburger"
+          aria-label="Navigation öffnen"
+          aria-expanded="false"
+          aria-controls="nav-mobile"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="nav__mobile" id="nav-mobile" role="menu">
+        <a href="/" class="nav__link" role="menuitem">Home</a>
+        <a href="/produkte" class="nav__link" role="menuitem">Produkte</a>
+        <a href="/uber-uns-kontakt" class="nav__link" role="menuitem">Über uns</a>
+        <a href="/impressum" class="nav__link" role="menuitem">Impressum</a>
+        <a href="/uber-uns-kontakt#kontakt" class="nav__cta" role="menuitem">Beratung anfragen</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <!-- Brand -->
+          <div class="footer__brand">
+            <div class="footer__brand-name">VVB Jürgen Schneider</div>
+            <div class="footer__brand-tagline">Sicher · Fair · Einfach</div>
+            <p>Ungebundener Versicherungsmakler in Altomünster. Wir finden für Sie die preiswertesten Angebote am Markt.</p>
+          </div>
+
+          <!-- Navigation -->
+          <div>
+            <div class="footer__col-title">Navigation</div>
+            <ul class="footer__links">
+              <li><a href="/" class="footer__link">Home</a></li>
+              <li><a href="/produkte" class="footer__link">Produkte</a></li>
+              <li><a href="/uber-uns-kontakt" class="footer__link">Über uns</a></li>
+              <li><a href="/uber-uns-kontakt#kontakt" class="footer__link">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontakt -->
+          <div>
+            <div class="footer__col-title">Kontakt</div>
+            <ul class="footer__links">
+              <li class="footer__link">Bgm.-Gruner-Str. 3</li>
+              <li class="footer__link">85250 Altomünster</li>
+              <li><a href="tel:+498254995353" class="footer__link">Tel.: 08254-995353</a></li>
+              <li><a href="mailto:vvbschneider@aol.com" class="footer__link">vvbschneider@aol.com</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <div class="footer__col-title">Rechtliches</div>
+            <ul class="footer__links">
+              <li><a href="/impressum" class="footer__link">Impressum</a></li>
+              <li><a href="/datenschutz" class="footer__link">Datenschutz</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>&copy; {new Date().getFullYear()} VVB Jürgen Schneider. Alle Rechte vorbehalten.</span>
+          <div class="footer__legal-links">
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ── Navigation scroll behavior
+      const nav = document.getElementById('main-nav');
+      const hamburger = document.getElementById('nav-hamburger');
+      const mobileMenu = document.getElementById('nav-mobile');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav?.classList.add('scrolled');
+        } else {
+          nav?.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // ── Hamburger menu
+      hamburger?.addEventListener('click', () => {
+        const isOpen = mobileMenu?.classList.contains('open');
+        mobileMenu?.classList.toggle('open', !isOpen);
+        hamburger.classList.toggle('open', !isOpen);
+        hamburger.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      // Close mobile menu on link click
+      mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          hamburger?.classList.remove('open');
+          hamburger?.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // ── Active nav link highlighting
+      const path = window.location.pathname.replace(/\/$/, '') || '/';
+      const navLinks = document.querySelectorAll('.nav__link');
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === path || (path.startsWith(href || '') && href !== '/')) {
+          link.classList.add('active');
+        }
+        if (href === '/' && path === '/') link.classList.add('active');
+      });
+
+      // ── Intersection Observer for scroll animations
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        );
+        revealEls.forEach(el => observer.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+      }
+    </script>
+  </body>
+</html>
