@@ -536,11 +536,12 @@ p { max-width: 68ch; }
 .about-image {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   border-radius: var(--radius-xl);
   padding: 3rem;
   position: relative;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .about-image::before {
@@ -1107,6 +1108,10 @@ p { max-width: 68ch; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .stats-row { gap: 1.5rem; }
   .cta-banner .btn { display: block; margin: 0.5rem 0; }
+  .about-image {
+    min-height: 240px;
+    background-position: center top;
+  }
 }
 
 @media (max-width: 480px) {
