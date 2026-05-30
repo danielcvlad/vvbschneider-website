@@ -184,8 +184,10 @@ const fullTitle = title === 'Home'
       const path = window.location.pathname.replace(/\/$/, '') || '/';
       const navLinks = document.querySelectorAll('.nav__link');
       navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === path || (path.startsWith(href || '') && href !== '/')) {
+        link.classList.remove('active');
+        const href = link.getAttribute('href') || '';
+        // Exact match, or path starts with href (for /products etc.) but NOT root /
+        if (href !== '/' && (path === href || path.startsWith(href + '/'))) {
           link.classList.add('active');
         }
         if (href === '/' && path === '/') link.classList.add('active');

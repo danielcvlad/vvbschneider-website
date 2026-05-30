@@ -367,7 +367,7 @@ p { max-width: 68ch; }
 /* ── Hero ── */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -379,10 +379,11 @@ p { max-width: 68ch; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(15,35,64,0.65) 0%, rgba(15,35,64,0.8) 100%),
+    linear-gradient(to bottom, rgba(15,35,64,0.55) 0%, rgba(15,35,64,0.75) 100%),
     url('/vvbschneider-website/hero.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  background-attachment: scroll;
 }
 
 .hero__pattern {
@@ -1111,6 +1112,12 @@ p { max-width: 68ch; }
   .about-image {
     min-height: 240px;
     background-position: center top;
+  }
+  .hero__bg {
+    background-position: center top;
+  }
+  .hero {
+    min-height: 70dvh;
   }
 }
 
