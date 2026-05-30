@@ -1110,14 +1110,11 @@ p { max-width: 68ch; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .stats-row { gap: 1.5rem; }
   .cta-banner .btn { display: block; margin: 0.5rem 0; }
-  .about-image {
+  .about-image{
     min-height: 240px;
     background-position: center top;
   }
-  .hero__bg {
-    background-position: center top;
-  }
-  .hero {
+  .hero{
     min-height: 70dvh;
   }
 }
