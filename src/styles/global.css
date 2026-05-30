@@ -383,7 +383,6 @@ p { max-width: 68ch; }
     url('/vvbschneider-website/hero.jpg');
   background-size: cover;
   background-position: center top;
-  background-attachment: scroll;
 }
 
 .hero__pattern {
