@@ -1228,6 +1228,7 @@ p { max-width: 68ch; }
   .photos-grid { grid-template-columns: 1fr; gap: 1rem; }
   .photo-card__img { aspect-ratio: 16 / 9; }
   .photo-card:nth-child(2) .photo-card__img { aspect-ratio: 16 / 9; }
+  .photo-card:last-child { display: none; } /* mobile: show only the 4-person photo */
   .why-grid { grid-template-columns: 1fr; }
   .intro-grid { grid-template-columns: 1fr; }
 }

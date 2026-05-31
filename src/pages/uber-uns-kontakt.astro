@@ -55,7 +55,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <div class="about-image reveal" style="display: flex; flex-direction: column; justify-content: center; min-height: 300px; background-image: url('/brand.jpg'); background-size: cover; background-position: center top;" aria-hidden="true">
+        <figure class="about-image reveal" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-md);">
+          <img
+            src="/vvbschneider-website/brand.jpg"
+            alt="Zwei Mitarbeiter von VVB Jürgen Schneider im Gespräch"
+            style="width: 100%; height: auto; display: block; object-fit: cover;"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
       </div>
     </div>
   </section>
