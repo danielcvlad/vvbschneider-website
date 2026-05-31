@@ -629,15 +629,17 @@ p { max-width: 68ch; }
   max-width: none;
 }
 
-.about-image {
-  background-color: var(--color-primary);
-  background-size: cover;
-  background-position: center top;
+figure.about-image {
   border-radius: var(--radius-xl);
-  padding: 3rem;
-  position: relative;
   overflow: hidden;
-  min-height: 300px;
+  box-shadow: var(--shadow-md);
+}
+
+figure.about-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
 }
 
 .about-image::before {
