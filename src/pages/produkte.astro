@@ -42,7 +42,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '📈', name: 'Riesterförderung' },
             { icon: '📉', name: 'Rürupförderung (Basisrente)' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -67,7 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '👁️', name: 'Brillen- & Sehhilfen-Zusatzversicherung' },
             { icon: '💊', name: 'Krankentagegeldversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -92,7 +92,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '🏍️', name: 'Motorradversicherung' },
             { icon: '🚲', name: 'E-Bike & Fahrradversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -118,7 +118,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '🌊', name: 'Elementarschadenversicherung' },
             { icon: '🏚️', name: 'Gewerbeimmobilienversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -143,7 +143,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '🐾', name: 'Tierhalterhaftpflicht' },
             { icon: '👶', name: 'Hundesteuer & Hundehaftpflicht' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -166,7 +166,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '⚡', name: 'Unfallversicherung mit Gliedertaxe+' },
             { icon: '👨‍💼', name: 'Berufsunfähigkeits-Unfallversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -191,7 +191,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '🧳', name: 'Reisegepäckversicherung' },
             { icon: '🏠', name: 'Reisekrankenversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>
@@ -217,7 +217,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { icon: '💻', name: 'Cyber-Versicherung' },
             { icon: '📋', name: 'Betriebshaftpflichtversicherung' },
           ].map(product => (
-            <div class="product-item">
+            <div class="product-item" aria-label={product.name}>
               <span class="product-item__icon" aria-hidden="true">{product.icon}</span>
               <span>{product.name}</span>
             </div>

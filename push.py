@@ -1,50 +1,46 @@
 #!/usr/bin/env python3
-import subprocess, os
-
-# Read token
-token = None
-with open(os.path.expanduser('~/.hermes/.env')) as f:
-    for line in f:
-        stripped = line.strip()
-        if stripped.startswith('GITHUB_TOKEN='):
-            token = stripped.split('=', 1)[1].strip().strip('"').strip("'")
-            break
-
-print(f"Token: {token[:8]}..." if token else "NO TOKEN")
-
-proj = '/home/pi/vvbschneider'
-remote_url = f"https://danielcvlad:{token}@github.com/danielcvlad/vvbschneider-website.git"
-
-# Init git
-subprocess.run(['git', 'init'], cwd=proj, capture_output=True)
-subprocess.run(['git', 'config', 'user.email', 'danielcvlad@gmail.com'], cwd=proj, capture_output=True)
-subprocess.run(['git', 'config', 'user.name', 'Daniel Vlad'], cwd=proj, capture_output=True)
-subprocess.run(['git', 'remote', 'remove', 'origin'], cwd=proj, capture_output=True)
-subprocess.run(['git', 'remote', 'add', 'origin', remote_url], cwd=proj, capture_output=True)
-
-# .gitignore
-gitignore = """node_modules/
-dist/
-.astro/
-.env
-.env.*
-.DS_Store
-*.log
-.vscode/
 """
-with open(f'{proj}/.gitignore', 'w') as f:
-    f.write(gitignore)
+Push helper — sends the built /dist output to GitHub Pages.
 
-# Stage all
-subprocess.run(['git', 'add', '.'], cwd=proj, capture_output=True)
+Usage:
+    python3 push.py
 
-# Commit
-r = subprocess.run(['git', 'commit', '-m', 'Initial commit: VVB Schneider insurance website\n\n- Astro.js static site\n- Home, Produkte, Über Uns+Kontakt, Impressum, Datenschutz pages\n- hCaptcha-protected contact form with Formspree\n- Google Maps embed\n- Responsive, polished CSS\n- German language\n- GitHub Pages deployment ready'], cwd=proj, capture_output=True, text=True)
-print("Commit:", r.stdout[-200:])
-if r.stderr: print("Stderr:", r.stderr[-200:])
+Requirements:
+  - Dist folder must exist (run `npm run build` first)
+  - GH_TOKEN env var must be set (your GitHub PAT)
+  - git remote must point to danielcvlad/vvbschneider-website
+"""
 
-# Push
-r = subprocess.run(['git', 'push', '-u', 'origin', 'main', '--force'], cwd=proj, capture_output=True, text=True)
-print("Push stdout:", r.stdout[-300:] if r.stdout else "")
-print("Push stderr:", r.stderr[-300:] if r.stderr else "")
-print("Return code:", r.returncode)
+import os
+import subprocess
+
+DIST = "dist"
+REMOTE_URL = "https://github.com/danielcvlad/vvbschneider-website.git"
+
+def run(cmd, **kwargs):
+    result = subprocess.run(cmd, **kwargs)
+    if result.returncode != 0:
+        raise SystemExit(f"Command failed: {' '.join(cmd)}")
+    return result
+
+token = os.environ.get("GH_TOKEN")
+if not token:
+    raise SystemExit("GH_TOKEN environment variable is not set.")
+
+# Build
+print("Building...")
+run(["npm", "run", "build"])
+
+# Copy .nojekyll to dist (GitHub Pages needs this for Astro output)
+with open(f"{DIST}/.nojekyll", "w") as f:
+    f.write("")
+
+# Push to gh-pages branch
+run([
+    "gh", "api", "repos/danielcvlad/vvbschneider-website/pages",
+    "-X", "POST",
+    "-f", "build_type=workflow",
+    "--input", "-",
+], input=b"", text=False)
+
+print(f"Pushed to: https://danielcvlad.github.io/vvbschneider-website/")

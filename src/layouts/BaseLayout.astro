@@ -17,7 +17,7 @@ const {
 
 const siteUrl = 'https://danielcvlad.github.io';
 const base = '/vvbschneider-website';
-const pageUrl = canonical || `${siteUrl}${base}${Astro.url.pathname.replace(base, '')}`;
+const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
 const fullTitle = title === 'Home'
   ? 'VVB Jürgen Schneider – Versicherungsmakler Altomünster'
   : `${title} | VVB Jürgen Schneider`;
@@ -36,13 +36,11 @@ const fullTitle = title === 'Home'
     <meta property="og:url" content={pageUrl} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteUrl}${base}${image}`} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteUrl}${base}${image}`} />
 
     <link rel="canonical" href={pageUrl} />
 
@@ -181,16 +179,23 @@ const fullTitle = title === 'Home'
       });
 
       // ── Active nav link highlighting
+      const base = '/vvbschneider-website';
       const path = window.location.pathname.replace(/\/$/, '') || '/';
+
       const navLinks = document.querySelectorAll('.nav__link');
       navLinks.forEach(link => {
         link.classList.remove('active');
         const href = link.getAttribute('href') || '';
-        // Exact match, or path starts with href (for /products etc.) but NOT root /
-        if (href !== '/' && (path === href || path.startsWith(href + '/'))) {
+        // Normalize both to paths without trailing slashes
+        const normalizedPath = path.replace(new RegExp('^' + base), '') || '/';
+        const normalizedHref = href.replace(new RegExp('^' + base), '') || '/';
+        if (
+          (normalizedHref === '/' && normalizedPath === '/') ||
+          (normalizedHref !== '/' && normalizedPath === normalizedHref) ||
+          (normalizedHref !== '/' && normalizedPath.startsWith(normalizedHref + '/'))
+        ) {
           link.classList.add('active');
         }
-        if (href === '/' && path === '/') link.classList.add('active');
       });
 
       // ── Intersection Observer for scroll animations
