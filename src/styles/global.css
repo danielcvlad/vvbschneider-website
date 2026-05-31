@@ -536,12 +536,97 @@ p { max-width: 68ch; }
   gap: 1.5rem;
 }
 
-/* ── About / Stats ── */
-.about-grid {
+/* ── Photos Section ── */
+.photos-section {
+  padding-top: 0;
+}
+
+.photos-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.photo-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--color-bg-alt);
+  margin: 0;
+  position: relative;
+}
+
+.photo-card__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Keep aspect ratios: hero=1000x586 (landscape), brand=620x364 (landscape) */
+  aspect-ratio: 1000 / 586;
+}
+
+.photo-card:nth-child(2) .photo-card__img {
+  aspect-ratio: 620 / 364;
+}
+
+/* ── Intro Grid ── */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ── Why Us Grid ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.why-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: var(--transition);
+}
+
+.why-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.why-card__icon {
+  width: 44px;
+  height: 44px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.why-card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  max-width: none;
 }
 
 .about-image {
@@ -1139,6 +1224,12 @@ p { max-width: 68ch; }
   .hero__actions .btn--outline-light {
     border-color: rgba(255,255,255,0.55);
   }
+
+  .photos-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .photo-card__img { aspect-ratio: 16 / 9; }
+  .photo-card:nth-child(2) .photo-card__img { aspect-ratio: 16 / 9; }
+  .why-grid { grid-template-columns: 1fr; }
+  .intro-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

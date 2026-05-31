@@ -6,7 +6,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero" aria-label="Willkommen bei VVB Jürgen Schneider">
-    <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__pattern" aria-hidden="true"></div>
 
     <div class="container">
@@ -45,18 +44,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ═══════════════ TEAM PHOTOS ═══════════════ -->
+  <section class="section photos-section" aria-label="Das Team von VVB Jürgen Schneider">
+    <div class="container">
+      <div class="photos-grid">
+        <figure class="photo-card reveal">
+          <img
+            src="/vvbschneider-website/hero.jpg"
+            alt="Das Team von VVB Jürgen Schneider – vier Mitarbeiter"
+            class="photo-card__img"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+        <figure class="photo-card reveal">
+          <img
+            src="/vvbschneider-website/brand.jpg"
+            alt="Zwei Mitarbeiter von VVB Jürgen Schneider im Gespräch"
+            class="photo-card__img"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════ INTRO ═══════════════ -->
   <section class="section" aria-labelledby="intro-heading">
     <div class="container">
-      <div class="about-grid">
-        <!-- Image / Visual side -->
-        <div class="about-image reveal" style="background-image: url('/brand.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" aria-hidden="true">
-        </div>
-
-        <!-- Text side -->
-        <div class="reveal">
-          <div class="section__tag">Über uns</div>
-          <h2 id="intro-heading">Ihr Partner für alle Versicherungsfragen</h2>
+      <div class="intro-grid">
+              <div class="reveal">
+                <div class="section__tag">Über uns</div>
+                <h2 id="intro-heading">Ihr Partner für alle Versicherungsfragen</h2>
 
           <p style="margin-top: 1.25rem; color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;">
             Als Versicherungsmakler, der nicht an ein bestimmtes Unternehmen gebunden ist,
@@ -178,50 +198,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- ═══════════════ WHY US ═══════════════ -->
-  <section class="section" aria-labelledby="why-heading">
+  <section class="section why-us" aria-labelledby="why-heading">
     <div class="container">
-      <div class="about-grid" style="align-items: start;">
-        <div style="order: 2;" class="reveal">
-          <div class="section__tag">Warum wir?</div>
-          <h2 id="why-heading">Unabhängig – Fair – Transparent</h2>
+      <div class="section__header reveal">
+        <div class="section__tag">Warum wir?</div>
+        <h2 class="section__title" id="why-heading">Unabhängig – Fair – Transparent</h2>
+      </div>
 
-          <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.25rem;">
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
-              <div>
-                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Keine versteckten Kosten</strong>
-                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Für unsere Beratung und Betreuung berechnen wir kein Honorar. Unsere Leistung wird von den Versicherungsgesellschaften bezahlt – nicht von Ihnen.</p>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
-              <div>
-                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">100% unabhängig</strong>
-                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Wir arbeiten nicht für eine einzelne Versicherung, sondern für Sie. So finden wir objektiv das beste Angebot am Markt.</p>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
-              <div>
-                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Persönliche Betreuung</strong>
-                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Ihr persönlicher Ansprechpartner – schnell erreichbar, direkt für Sie da – auch im Schadenfall.</p>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <div style="width: 36px; height: 36px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--color-primary); font-weight: 700; font-size: 0.9rem;">✓</div>
-              <div>
-                <strong style="color: var(--color-primary); display: block; margin-bottom: 0.25rem;">Umfassende Vergleiche</strong>
-                <p style="color: var(--color-text-muted); font-size: 0.92rem;">Von KFZ bis Krankenversicherung – wir vergleichen anonym und objektiv, um das optimale Preis-Leistungs-Verhältnis für Sie zu ermitteln.</p>
-              </div>
-            </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
+          <h3>Keine versteckten Kosten</h3>
+          <p>Für unsere Beratung und Betreuung berechnen wir kein Honorar. Unsere Leistung wird von den Versicherungsgesellschaften bezahlt – nicht von Ihnen.</p>
         </div>
-
-        <!-- Quote / Trust element -->
-        <div class="about-image reveal" style="order: 1; background-image: url('/brand.jpg'); background-size: cover; background-position: center top;" aria-hidden="true"></div>
+        <div class="why-card reveal">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>100% unabhängig</h3>
+          <p>Wir arbeiten nicht für eine einzelne Versicherung, sondern für Sie. So finden wir objektiv das beste Angebot am Markt.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Persönliche Betreuung</h3>
+          <p>Ihr persönlicher Ansprechpartner – schnell erreichbar, direkt für Sie da – auch im Schadenfall.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Umfassende Vergleiche</h3>
+          <p>Von KFZ bis Krankenversicherung – wir vergleichen anonym und objektiv, um das optimale Preis-Leistungs-Verhältnis für Sie zu ermitteln.</p>
+        </div>
       </div>
     </div>
   </section>
